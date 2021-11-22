@@ -1,4 +1,5 @@
-﻿using RegistroDePrestamo.UI.Registros;
+﻿using RegistroDePrestamo.UI.Consultas;
+using RegistroDePrestamo.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,6 +53,12 @@ namespace RegistroDePrestamo
         {
             rEmpleado rEmpleado = new rEmpleado();
             rEmpleado.Show();
+        }
+
+        private void MenuItem_Click_5(object sender, RoutedEventArgs e)
+        {
+            cEmpleado cEmpleado = new cEmpleado();
+            cEmpleado.Show();
         }
     }
 }
