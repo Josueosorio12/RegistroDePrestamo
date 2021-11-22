@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,5 +39,9 @@ namespace RegistroDePrestamo.Entidades
         public float MontoTotal { get; set; }
         public string Contrasena { get; set; }
         public string NombreDeUsuario { get; set; }
+
+        [ForeignKey("Prestamoid")]
+
+        public virtual List<PrestamoDetalle> Detalle { get; set; } = new List<PrestamoDetalle>();
     }
 }
