@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel>
             <Menu>
-
+                
                 <MenuItem Header="Registros" Click="MenuItem_Click">
                     <MenuItem Header="Registro De Prestamos" Click="MenuItem_Click_2"/>
 
