@@ -84,10 +84,75 @@ namespace RegistroDePrestamo.Migrations
                     b.ToTable("Clientes");
                 });
 
+            modelBuilder.Entity("RegistroDePrestamo.Entidades.Empleados", b =>
+                {
+                    b.Property<int>("CodigoEmpleado")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Apellidos")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Cargo")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Celular")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Ciudad")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Direccion")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Empresa")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Estado")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("EstadoCivil")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("FechaEmpleado")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Ingreso")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nombres")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("NumeroDocumento")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Sexo")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Telefono")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TipoDocumento")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TipoPago")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CodigoEmpleado");
+
+                    b.ToTable("Empleados");
+                });
+
             modelBuilder.Entity("RegistroDePrestamo.Entidades.PrestamoDetalle", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("EmpleadosCodigoEmpleado")
                         .HasColumnType("INTEGER");
 
                     b.Property<float>("MontoCuota")
@@ -106,6 +171,8 @@ namespace RegistroDePrestamo.Migrations
                         .HasColumnType("REAL");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EmpleadosCodigoEmpleado");
 
                     b.HasIndex("Prestamoid");
 
@@ -200,7 +267,7 @@ namespace RegistroDePrestamo.Migrations
                             Prestamoid = 1,
                             Apellidos = "Almonte",
                             Contrasena = "e1ab9d7f0b137ad16566742ad38863ec42b6d7fba157ef51638e60a4e044bd13",
-                            FechaRegistro = new DateTime(2021, 11, 22, 18, 28, 2, 186, DateTimeKind.Local).AddTicks(9313),
+                            FechaRegistro = new DateTime(2021, 11, 22, 19, 8, 59, 897, DateTimeKind.Local).AddTicks(1342),
                             Interes = 0f,
                             MontoCuota = 0f,
                             MontoPrestamo = 0f,
@@ -215,6 +282,10 @@ namespace RegistroDePrestamo.Migrations
 
             modelBuilder.Entity("RegistroDePrestamo.Entidades.PrestamoDetalle", b =>
                 {
+                    b.HasOne("RegistroDePrestamo.Entidades.Empleados", null)
+                        .WithMany("Detalles")
+                        .HasForeignKey("EmpleadosCodigoEmpleado");
+
                     b.HasOne("RegistroDePrestamo.Entidades.Prestamos", "Prestamos")
                         .WithMany("Detalle")
                         .HasForeignKey("Prestamoid")
@@ -222,6 +293,11 @@ namespace RegistroDePrestamo.Migrations
                         .IsRequired();
 
                     b.Navigation("Prestamos");
+                });
+
+            modelBuilder.Entity("RegistroDePrestamo.Entidades.Empleados", b =>
+                {
+                    b.Navigation("Detalles");
                 });
 
             modelBuilder.Entity("RegistroDePrestamo.Entidades.Prestamos", b =>

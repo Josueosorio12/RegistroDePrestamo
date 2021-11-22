@@ -39,6 +39,35 @@ namespace RegistroDePrestamo.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Empleados",
+                columns: table => new
+                {
+                    CodigoEmpleado = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    FechaEmpleado = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    Nombres = table.Column<string>(type: "TEXT", nullable: true),
+                    Apellidos = table.Column<string>(type: "TEXT", nullable: true),
+                    Sexo = table.Column<string>(type: "TEXT", nullable: true),
+                    Celular = table.Column<string>(type: "TEXT", nullable: true),
+                    TipoDocumento = table.Column<string>(type: "TEXT", nullable: true),
+                    NumeroDocumento = table.Column<string>(type: "TEXT", nullable: true),
+                    Telefono = table.Column<string>(type: "TEXT", nullable: true),
+                    Direccion = table.Column<string>(type: "TEXT", nullable: true),
+                    Ciudad = table.Column<string>(type: "TEXT", nullable: true),
+                    EstadoCivil = table.Column<string>(type: "TEXT", nullable: true),
+                    Email = table.Column<string>(type: "TEXT", nullable: true),
+                    Empresa = table.Column<string>(type: "TEXT", nullable: true),
+                    TipoPago = table.Column<string>(type: "TEXT", nullable: true),
+                    Ingreso = table.Column<string>(type: "TEXT", nullable: true),
+                    Cargo = table.Column<string>(type: "TEXT", nullable: true),
+                    Estado = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Empleados", x => x.CodigoEmpleado);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Prestamos",
                 columns: table => new
                 {
@@ -84,11 +113,18 @@ namespace RegistroDePrestamo.Migrations
                     NumeroCuota = table.Column<int>(type: "INTEGER", nullable: false),
                     MontoCuota = table.Column<float>(type: "REAL", nullable: false),
                     TotalIntereses = table.Column<float>(type: "REAL", nullable: false),
-                    MontoTotal = table.Column<float>(type: "REAL", nullable: false)
+                    MontoTotal = table.Column<float>(type: "REAL", nullable: false),
+                    EmpleadosCodigoEmpleado = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PrestamoDetalle", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_PrestamoDetalle_Empleados_EmpleadosCodigoEmpleado",
+                        column: x => x.EmpleadosCodigoEmpleado,
+                        principalTable: "Empleados",
+                        principalColumn: "CodigoEmpleado",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_PrestamoDetalle_Prestamos_Prestamoid",
                         column: x => x.Prestamoid,
@@ -100,7 +136,12 @@ namespace RegistroDePrestamo.Migrations
             migrationBuilder.InsertData(
                 table: "Prestamos",
                 columns: new[] { "Prestamoid", "Apellidos", "Celular", "Ciudad", "Contrasena", "Direccion", "Email", "EstadoCivil", "FechaRegistro", "FormaPago", "Interes", "LugarTrabajo", "MontoCuota", "MontoPrestamo", "MontoTotal", "NombreDeUsuario", "Nombres", "NumeroCuota", "NumeroDocumento", "Ocupacion", "Sexo", "SueldoMensual", "Telefono", "TipoDocumento", "TotalIntereses" },
-                values: new object[] { 1, "Almonte", null, null, "e1ab9d7f0b137ad16566742ad38863ec42b6d7fba157ef51638e60a4e044bd13", null, null, null, new DateTime(2021, 11, 22, 18, 28, 2, 186, DateTimeKind.Local).AddTicks(9313), null, 0f, null, 0f, 0f, 0f, "Profesor", "Enel", 0, null, null, null, 0, null, null, 0f });
+                values: new object[] { 1, "Almonte", null, null, "e1ab9d7f0b137ad16566742ad38863ec42b6d7fba157ef51638e60a4e044bd13", null, null, null, new DateTime(2021, 11, 22, 19, 8, 59, 897, DateTimeKind.Local).AddTicks(1342), null, 0f, null, 0f, 0f, 0f, "Profesor", "Enel", 0, null, null, null, 0, null, null, 0f });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PrestamoDetalle_EmpleadosCodigoEmpleado",
+                table: "PrestamoDetalle",
+                column: "EmpleadosCodigoEmpleado");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PrestamoDetalle_Prestamoid",
@@ -115,6 +156,9 @@ namespace RegistroDePrestamo.Migrations
 
             migrationBuilder.DropTable(
                 name: "PrestamoDetalle");
+
+            migrationBuilder.DropTable(
+                name: "Empleados");
 
             migrationBuilder.DropTable(
                 name: "Prestamos");

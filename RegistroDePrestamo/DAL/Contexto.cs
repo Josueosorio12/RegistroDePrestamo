@@ -12,6 +12,7 @@ namespace RegistroDePrestamo.DAL
     {
         public DbSet<Clientes> Clientes { get; set; }
         public DbSet<Prestamos> Prestamos { get; set; }
+        public DbSet<Empleados> Empleados { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.EnableSensitiveDataLogging().UseSqlite(@"Data Source = DATA\Prestamo.db");
