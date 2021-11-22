@@ -53,7 +53,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="BLL\" />
     <Folder Include="DATA\" />
     <Folder Include="DAL\" />
     <Folder Include="UI\Consultas\" />
