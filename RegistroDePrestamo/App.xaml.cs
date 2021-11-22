@@ -13,5 +13,10 @@ namespace RegistroDePrestamo
     /// </summary>
     public partial class App : Application
     {
+        private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            MessageBox.Show("Lo Sentimos ha Ocurrido una Excepcion" + e.Exception.Message);
+            e.Handled = true;
+        }
     }
 }
