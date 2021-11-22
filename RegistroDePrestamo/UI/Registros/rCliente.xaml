@@ -8,7 +8,7 @@
         Title="Registro de Cliente" Height="568" Width="820">
     <Grid>
         <StackPanel>
-
+            
             <StackPanel Orientation="Horizontal">
                 <Label Content="Codigo Cliente"/>
                 <TextBox x:Name="CodigoClienteTextBox" Text="{Binding CodigoCliente}" Width="110" Margin="5" Height="24"/>
