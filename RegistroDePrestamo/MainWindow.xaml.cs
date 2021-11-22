@@ -28,8 +28,7 @@ namespace RegistroDePrestamo
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            rPrestamo rPrestamo = new rPrestamo();
-            rPrestamo.Show();
+            
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
@@ -39,7 +38,8 @@ namespace RegistroDePrestamo
 
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
-
+            rPrestamo rPrestamo = new rPrestamo();
+            rPrestamo.Show();
         }
 
         private void MenuItem_Click_3(object sender, RoutedEventArgs e)

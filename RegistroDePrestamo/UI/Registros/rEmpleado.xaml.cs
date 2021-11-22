@@ -21,6 +21,21 @@ namespace RegistroDePrestamo.UI.Registros
     /// </summary>
     public partial class rEmpleado : Window
     {
+        public class DateFormat : System.Windows.Data.IValueConverter
+        {
+            public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+            {
+                if (value == null) return null;
+
+                return ((DateTime)value).ToString("dd/MM/yyyy");
+            }
+
+            public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         private Empleados empleados = new Empleados();
         
 
