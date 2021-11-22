@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroDePrestamo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="312" Width="463">
     <Grid>
+        <StackPanel>
+            <Menu>
 
+                <MenuItem Header="Registros" Click="MenuItem_Click">
+
+                </MenuItem>
+
+                <MenuItem Header="Cosultas" Click="MenuItem_Click_1">
+
+                </MenuItem>
+
+
+
+
+
+
+
+
+
+            </Menu>
+        </StackPanel>
     </Grid>
 </Window>
