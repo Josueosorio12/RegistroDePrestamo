@@ -50,7 +50,6 @@
 
   <ItemGroup>
     <Folder Include="BLL\" />
-    <Folder Include="Entidades\" />
     <Folder Include="DATA\" />
     <Folder Include="DAL\" />
     <Folder Include="UI\Consultas\" />
