@@ -7,6 +7,48 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Agregar.png" />
+    <None Remove="Resources\Buscar.png" />
+    <None Remove="Resources\Cancelar.png" />
+    <None Remove="Resources\Eliminar.png" />
+    <None Remove="Resources\Guardar.png" />
+    <None Remove="Resources\Ingresar.png" />
+    <None Remove="Resources\Nuevo.png" />
+    <None Remove="Resources\Pagar.png" />
+    <None Remove="Resources\registrar.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Agregar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Buscar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cancelar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Eliminar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Guardar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ingresar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Nuevo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pagar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\registrar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="BLL\" />
     <Folder Include="Entidades\" />
     <Folder Include="DATA\" />
