@@ -47,5 +47,11 @@ namespace RegistroDePrestamo
         {
 
         }
+
+        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
+        {
+            rEmpleado rEmpleado = new rEmpleado();
+            rEmpleado.Show();
+        }
     }
 }

@@ -13,6 +13,7 @@
                 <MenuItem Header="Registros" Click="MenuItem_Click">
                     <MenuItem Header="Registro De Cliente" Click="MenuItem_Click_3"/>
                     <MenuItem Header="Registro De Prestamos" Click="MenuItem_Click_2"/>
+                    <MenuItem Header="Registro De Empleados" Click="MenuItem_Click_4"/>
 
                 </MenuItem>
 

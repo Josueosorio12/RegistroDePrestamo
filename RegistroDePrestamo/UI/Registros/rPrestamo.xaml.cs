@@ -19,6 +19,20 @@ namespace RegistroDePrestamo.UI.Registros
     /// <summary>
     /// Interaction logic for rPrestamo.xaml
     /// </summary>
+    public class DateFormat : System.Windows.Data.IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            if (value == null) return null;
+
+            return ((DateTime)value).ToString("dd/MM/yyyy");
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
     public partial class rPrestamo : Window
     {
         private Prestamos prestamos = new Prestamos();
