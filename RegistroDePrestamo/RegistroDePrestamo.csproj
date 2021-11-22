@@ -11,6 +11,7 @@
     <None Remove="Resources\Buscar.png" />
     <None Remove="Resources\Cancelar.png" />
     <None Remove="Resources\Eliminar.png" />
+    <None Remove="Resources\GenerarCuota.png" />
     <None Remove="Resources\Guardar.png" />
     <None Remove="Resources\Ingresar.png" />
     <None Remove="Resources\Nuevo.png" />
@@ -29,6 +30,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Eliminar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GenerarCuota.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Guardar.png">
@@ -53,7 +57,6 @@
     <Folder Include="DATA\" />
     <Folder Include="DAL\" />
     <Folder Include="UI\Consultas\" />
-    <Folder Include="UI\Registros\" />
   </ItemGroup>
 
   <ItemGroup>

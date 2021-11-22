@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegistroDePrestamo.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,10 +28,16 @@ namespace RegistroDePrestamo
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            rPrestamo rPrestamo = new rPrestamo();
+            rPrestamo.Show();
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
 
         }

@@ -1,0 +1,210 @@
+﻿<Window x:Class="RegistroDePrestamo.UI.Registros.rPrestamo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroDePrestamo.UI.Registros"
+        mc:Ignorable="d"
+        Title="rPrestamo" Height="744" Width="809">
+    <Grid>
+        <StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Nº Operacion" Height="38"/>
+                <TextBox x:Name="OperacionTextBox" Text="{Binding Prestamoid}" Margin="10" Width="130" Height="30"/>
+
+                <Label Content="Fecha Registro:" Height="38"/>
+                <DatePicker  SelectedDate="{Binding FechaRegistro}" Width="130"  Height="30" Margin="5"/>
+
+                <Button x:Name="BuscarButton" Click="BuscarButton_Click" Width="78" Height="30">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Buscar"/>
+                        <Image Source="/Resources/Buscar.png"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <GroupBox Header="Informacion del cliente" Margin="5">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+
+                            <Label Content="Nombre" Height="30" Width="123"/>
+                            <TextBox x:Name="NombreTextBox" Text="{Binding Nombres}" Margin="5" Height="30" Width="130"/>
+
+                            <Label Content="Apellido" Height="30" Width="60"/>
+                            <TextBox x:Name="ApellidoTextBox" Text="{Binding Apellidos}" Margin="5" Height="30" Width="128"/>
+
+                            <Label Content="Tipo Documento" Width="100" Height="32"/>
+                            <ComboBox Name="TipoDocumentoComboBox"  Width="125" Height="30" Text="{Binding TipoDocumento}">
+                                <ComboBoxItem Content="Cedula"/>
+                                <ComboBoxItem Content="Pasaporte"/>
+                            </ComboBox>
+                        </StackPanel>
+
+
+                        <StackPanel Orientation="Horizontal" >
+                            <Label Content="Numero Documento" Width="122" Height="30"/>
+                            <TextBox x:Name="NumeroDocumentoTextBox" Text="{Binding NumeroDocumento}" Margin="5" Height="30" Width="130"/>
+
+                            <Label Content="Direccion" Width="61"/>
+                            <TextBox x:Name="DireccionTextBox" Text="{Binding Direccion}" Margin="5" Height="30" Width="128"/>
+
+                            <Label Content="Ciudad" Width="94"/>
+                            <TextBox x:Name="CiudadTextBox" Text="{Binding Ciudad}" Margin="5" Height="30" Width="126"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" >
+
+                            <Label Content="Sexo:" Width="126"/>
+                            <ComboBox Name="SexoComboBox" Width="130" Height="30" Text="{Binding Sexo}">
+                                <ComboBoxItem Content="Masculino"/>
+                                <ComboBoxItem Content="Femenino"/>
+                            </ComboBox>
+
+                            <Label x:Name="EstadoCivilLabel" Content="Estado Civil:" Width="72"/>
+                            <ComboBox x:Name="EstadoCivilComboBox" Width="128" Height="30" Text="{Binding EstadoCivil}" >
+                                <ComboBoxItem Content="Soltero/a"/>
+                                <ComboBoxItem Content="Casado/a"/>
+
+                            </ComboBox>
+
+
+                            <Label Content="Telefono" Width="98"/>
+                            <TextBox x:Name="TelefonoTextBox" Text="{Binding Telefono}" Margin="5" Height="30" Width="127"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Celular:" Width="126"/>
+                            <TextBox x:Name="CelularTextBox" Text="{Binding Celular}" Width="129" Height="30"/>
+
+                            <Label Content="Lugar De Trabajo:" Width="100"/>
+                            <TextBox x:Name="LugarTrabajoTextBox" Text="{Binding LugarTrabajo}" Width="101" Height="30"/>
+
+                            <Label Content="Ocupacion:" Width="102"/>
+                            <TextBox x:Name="OcupacionTextBox" Text="{Binding Ocupacion}" Height="30" Width="128"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Content="Sueldo Mesual:" Width="122"/>
+                            <TextBox x:Name="SueeldoTextBox" Text="{Binding SueldoMensual}" Width="127" Height="30"/>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </GroupBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <GroupBox Header="Informacion del prestamo">
+                    <StackPanel Margin="10">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Monto Prestamo"/>
+                            <TextBox x:Name="MontoTextBox" Text="{Binding MontoPrestamo}" Margin="5" Height="30" Width="130"/>
+
+                            <Label Content="Interes" Width="58"/>
+                            <TextBox x:Name="InteresTextBox" Text="{Binding Interes}" Margin="5" Height="30" Width="130"/>
+
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+
+                            <Label Content="Forma De Pago" Width="104"/>
+                            <ComboBox Name="FormaDePago" Width="130" Height="30" Text="{Binding FormaPago}">
+                                <ComboBoxItem Content="Quincenal"/>
+                                <ComboBoxItem Content="Mensual"/>
+                            </ComboBox>
+
+                            <Label Content="Nº Cuota"/>
+                            <TextBox x:Name="NumeroCuotaTextBox" Text="{Binding NumeroCuota}" Margin="5" Height="30" Width="131"/>
+
+                            <Button x:Name="AgregarCuotaButton" Click="AgregarCuotaButton_Click" Height="30" Width="131">
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Generar Cuota"/>
+                                    <Image Source="/Resources/GenerarCuota.png" />
+
+                                </StackPanel>
+                            </Button>
+
+                        </StackPanel>
+
+
+                    </StackPanel>
+
+
+                </GroupBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label Content="Monto por Cuota" Width="100"/>
+                <TextBox x:Name="MontoCuotaTextBox" Text="{Binding Detalle.MontoCuota}" Margin="5" Height="30" Width="129"/>
+                <TextBlock></TextBlock>
+                <Label Content="Total Intereses"/>
+                <TextBox x:Name="TotalInteresTextBox" Text="{Binding Detalle.TotalIntereses}" Margin="5" Height="30" Width="100"/>
+
+                <Label Content="Monto Total a pagar"/>
+                <TextBox x:Name="MontoTotalTextBox" Text="{Binding Detalle.MontoTotal}" Margin="5" Height="30" Width="173"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Width="308">
+                <Button x:Name="AgregarButton" Click="AgregarButton_Click" Width="110" Height="30" Margin="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Agregar Fila"/>
+                        <Image Source="/Resources/Agregar.png"/>
+
+
+                    </StackPanel>
+                </Button>
+
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5" Width="632">
+                <DataGrid x:Name="DatosPretamosGrid"  AutoGenerateColumns="False" Width="632" Height="141" ItemsSource="{Binding Detalle}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Nº Cuota" Binding="{Binding NumeroCuota}"/>
+                        <DataGridTextColumn Header="Interese" Binding="{Binding TotalIntereses}"/>
+                        <DataGridTextColumn Header="Capital" Binding="{Binding MontoPrestamo}"/>
+                        <DataGridTextColumn Header="Monto Total a Pagar" Binding="{Binding MontoTotal}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="10" Width="364">
+
+                <Button x:Name="NuevoButton" Click="NuevoButton_Click" Width="110" Margin="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Nuevo"/>
+                        <Image Source="/Resources/Nuevo.png"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="RegistrarButton" Click="RegistrarButton_Click" Width="110" Margin="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Registrar"/>
+                        <Image Source="/Resources/registrar.png" RenderTransformOrigin="0.5,0.5" Width="52" Height="32">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="-1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="EliminarButton" Click="EliminarButton_Click" Width="110" Margin="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Eliminar"/>
+                        <Image Source="/Resources/Eliminar.png" Width="52" Height="33"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+
+
+
+        </StackPanel>
+    </Grid>
+</Window>
