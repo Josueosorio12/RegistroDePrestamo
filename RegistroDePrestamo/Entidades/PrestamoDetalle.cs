@@ -13,7 +13,7 @@ namespace RegistroDePrestamo.Entidades
 
         public int Id { get; set; }
         public int Prestamoid { get; set; }
-       
+      //  public Cuota TipoCuota { get; set; }
         public int NumeroCuota { get; set; }
         public float MontoCuota { get; set; }
         public float TotalIntereses { get; set; }
