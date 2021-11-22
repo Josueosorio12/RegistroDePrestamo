@@ -1,0 +1,167 @@
+﻿<Window x:Class="RegistroDePrestamo.UI.Registros.rEmpleado"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroDePrestamo.UI.Registros"
+        mc:Ignorable="d"
+        Title="rEmpleado" Height="501" Width="795">
+    <Grid>
+        <StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Codigo Empleado"/>
+                <TextBox x:Name="CodigoClienteTextBox" Text="{Binding CodigoEmpleado}" Width="110" Margin="5" Height="24"/>
+
+                <Label Content="Fecha:" Height="38"/>
+                <DatePicker  SelectedDate="{Binding FechaEmpleado}" Width="130"  Height="30" Margin="5"/>
+
+                <Button x:Name="BuscarButton" Click="BuscarButton_Click" Width="90" Height="30">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Buscar"/>
+                        <Image Source="/Resources/Buscar.png"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <GroupBox Header="Registro de Empleados" Margin="10">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+
+                            <Label Content="Nombre"/>
+                            <TextBox x:Name="NombreTextBox" Text="{Binding Nombres}" Margin="5" Height="30" Width="130"/>
+
+                            <Label Content="Apellido"/>
+                            <TextBox x:Name="ApellidoTextBox" Text="{Binding Apellidos}" Margin="5" Height="30" Width="136"/>
+
+                            <Label Content="Tipo Documento"/>
+                            <ComboBox Name="TipoDocumentoComboBox"  Width="139" Height="30" Text="{Binding TipoDocumento}">
+                                <ComboBoxItem Content="Cedula"/>
+                                <ComboBoxItem Content="Pasaporte"/>
+                            </ComboBox>
+
+
+
+                        </StackPanel>
+
+
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Content="Nº Documento" Width="88"/>
+                            <TextBox x:Name="NumeroDocumentoTextBox" Text="{Binding NumeroDocumento}" Margin="5" Height="30" Width="100"/>
+
+                            <Label Content="Direccion" Width="62"/>
+                            <TextBox x:Name="DireccionTextBox" Text="{Binding Direccion}" Margin="5" Height="30" Width="129"/>
+
+                            <Label Content="Ciudad" Width="93"/>
+                            <TextBox x:Name="CiudadTextBox" Text="{Binding Ciudad}" Margin="5" Height="30" Width="141"/>
+
+
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Content="Telefono" Width="62"/>
+                            <TextBox x:Name="TelefonoTextBox" Text="{Binding Telefono}" Margin="5" Height="30" Width="128"/>
+
+                            <Label Content="Celular" Width="62"/>
+                            <TextBox x:Name="CelularTextBox" Text="{Binding Celular}" Margin="5" Height="30" Width="128"/>
+
+                            <Label Content="Sexo:" Width="102"/>
+                            <ComboBox Name="SexoComboBox" Width="136" Height="30" Text="{Binding Sexo}">
+                                <ComboBoxItem Content="Masculino"/>
+                                <ComboBoxItem Content="Femenino"/>
+                            </ComboBox>
+
+
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+
+                            <Label x:Name="EstadoCivilLabel" Content="Estado Civil:" Width="74"/>
+                            <ComboBox x:Name="EstadoCivilComboBox" Width="125" Height="30" Text="{Binding EstadoCivil}" >
+                                <ComboBoxItem Content="Soltero/a"/>
+                                <ComboBoxItem Content="Casado/a"/>
+
+                            </ComboBox>
+
+                            <Label Content="Correo Eletrocnico" Width="112"/>
+                            <TextBox x:Name="EmailTextBox" Text="{Binding Email}" Margin="5" Height="30" Width="328"/>
+
+                        </StackPanel>
+
+
+                    </StackPanel>
+
+                </GroupBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="15">
+                <GroupBox Header="Informacion del trabajo">
+                    <StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Content="Nombre de la Empresa:"/>
+                            <TextBox x:Name="EmpresaTextBox" Text="{Binding Empresa}" Margin="5" Width="81" Height="25"/>
+
+                            <Label Content="Cargo:" Width="71"/>
+                            <TextBox x:Name="CargoTextBox" Text="{Binding Cargo}" Margin="5" Height="25" Width="80"/>
+
+                            <Label x:Name="TipoPagoLabel" Content="Tipo de Pago:" Width="89"/>
+                            <ComboBox x:Name="TipoPagoComboBox" Width="125" Height="30" Text="{Binding TipoPago }" >
+                                <ComboBoxItem Content="Semanal"/>
+                                <ComboBoxItem Content="Quincenal"/>
+                                <ComboBoxItem Content="Mensual"/>
+
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="5">
+
+                            <Label x:Name="EstadoLabel" Content="Estado:" Width="89"/>
+                            <ComboBox x:Name="EstadoComboBox" Width="131" Height="30" Text="{Binding Estado }" >
+                                <ComboBoxItem Content="Permanente"/>
+                                <ComboBoxItem Content="Pasantia"/>
+                                <ComboBoxItem Content="Medio Tiempo"/>
+                                <ComboBoxItem Content="Temporal"/>
+
+                            </ComboBox>
+
+
+
+                            <Label Content="Ingresos:" Width="74"/>
+                            <TextBox x:Name="IngresoTextBox" Text="{Binding Ingreso}" Margin="5" Height="25" Width="81"/>
+
+
+                        </StackPanel>
+                    </StackPanel>
+
+                </GroupBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="NuevoButton" Click="NuevoButton_Click" Width="110" Height="30" Margin="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Nuevo"/>
+                        <Image Source="/Resources/Nuevo.png"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="GuardarButton" Click="GuardarButton_Click" Width="110" Height="30" Margin="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Guardar"/>
+                        <Image Source="/Resources/Guardar.png"/>
+                    </StackPanel>
+
+                </Button>
+
+
+                <Button x:Name="EliminarButton" Click="EliminarButton_Click" Width="110" Height="30" Margin="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Eliminar"/>
+                        <Image Source="/Resources/Eliminar.png"/>
+                    </StackPanel>
+                </Button>
+
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
