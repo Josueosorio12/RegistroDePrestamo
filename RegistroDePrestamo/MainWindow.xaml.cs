@@ -90,5 +90,11 @@ namespace RegistroDePrestamo
             cGeneralPrestamo cGeneralPrestamo = new cGeneralPrestamo();
             cGeneralPrestamo.Show();
         }
+
+        private void MenuItem_Click_11(object sender, RoutedEventArgs e)
+        {
+            rCobro rCobro = new rCobro();
+            rCobro.Show();
+        }
     }
 }
