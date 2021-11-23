@@ -78,5 +78,11 @@ namespace RegistroDePrestamo
             cCliente cCliente = new cCliente();
             cCliente.Show();
         }
+
+        private void MenuItem_Click_9(object sender, RoutedEventArgs e)
+        {
+            cPrestamos cPrestamos = new cPrestamos();
+            cPrestamos.Show();
+        }
     }
 }
