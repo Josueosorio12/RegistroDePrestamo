@@ -9,7 +9,7 @@ using RegistroDePrestamo.DAL;
 namespace RegistroDePrestamo.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20211122230900_inicial")]
+    [Migration("20211123022350_inicial")]
     partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -269,7 +269,7 @@ namespace RegistroDePrestamo.Migrations
                             Prestamoid = 1,
                             Apellidos = "Almonte",
                             Contrasena = "e1ab9d7f0b137ad16566742ad38863ec42b6d7fba157ef51638e60a4e044bd13",
-                            FechaRegistro = new DateTime(2021, 11, 22, 19, 8, 59, 897, DateTimeKind.Local).AddTicks(1342),
+                            FechaRegistro = new DateTime(2021, 11, 22, 22, 23, 48, 835, DateTimeKind.Local).AddTicks(803),
                             Interes = 0f,
                             MontoCuota = 0f,
                             MontoPrestamo = 0f,
@@ -280,6 +280,38 @@ namespace RegistroDePrestamo.Migrations
                             SueldoMensual = 0,
                             TotalIntereses = 0f
                         });
+                });
+
+            modelBuilder.Entity("RegistroDePrestamo.Entidades.Usuarios", b =>
+                {
+                    b.Property<int>("UsuarioId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Activo")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Alias")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Clave")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("FechaIngreso")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nombres")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RolID")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("UsuarioId");
+
+                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("RegistroDePrestamo.Entidades.PrestamoDetalle", b =>

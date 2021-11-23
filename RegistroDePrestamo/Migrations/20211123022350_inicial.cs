@@ -104,6 +104,25 @@ namespace RegistroDePrestamo.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Usuarios",
+                columns: table => new
+                {
+                    UsuarioId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    FechaIngreso = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    Alias = table.Column<string>(type: "TEXT", nullable: true),
+                    Nombres = table.Column<string>(type: "TEXT", nullable: true),
+                    Email = table.Column<string>(type: "TEXT", nullable: true),
+                    Clave = table.Column<string>(type: "TEXT", nullable: true),
+                    RolID = table.Column<string>(type: "TEXT", nullable: true),
+                    Activo = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Usuarios", x => x.UsuarioId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "PrestamoDetalle",
                 columns: table => new
                 {
@@ -136,7 +155,7 @@ namespace RegistroDePrestamo.Migrations
             migrationBuilder.InsertData(
                 table: "Prestamos",
                 columns: new[] { "Prestamoid", "Apellidos", "Celular", "Ciudad", "Contrasena", "Direccion", "Email", "EstadoCivil", "FechaRegistro", "FormaPago", "Interes", "LugarTrabajo", "MontoCuota", "MontoPrestamo", "MontoTotal", "NombreDeUsuario", "Nombres", "NumeroCuota", "NumeroDocumento", "Ocupacion", "Sexo", "SueldoMensual", "Telefono", "TipoDocumento", "TotalIntereses" },
-                values: new object[] { 1, "Almonte", null, null, "e1ab9d7f0b137ad16566742ad38863ec42b6d7fba157ef51638e60a4e044bd13", null, null, null, new DateTime(2021, 11, 22, 19, 8, 59, 897, DateTimeKind.Local).AddTicks(1342), null, 0f, null, 0f, 0f, 0f, "Profesor", "Enel", 0, null, null, null, 0, null, null, 0f });
+                values: new object[] { 1, "Almonte", null, null, "e1ab9d7f0b137ad16566742ad38863ec42b6d7fba157ef51638e60a4e044bd13", null, null, null, new DateTime(2021, 11, 22, 22, 23, 48, 835, DateTimeKind.Local).AddTicks(803), null, 0f, null, 0f, 0f, 0f, "Profesor", "Enel", 0, null, null, null, 0, null, null, 0f });
 
             migrationBuilder.CreateIndex(
                 name: "IX_PrestamoDetalle_EmpleadosCodigoEmpleado",
@@ -156,6 +175,9 @@ namespace RegistroDePrestamo.Migrations
 
             migrationBuilder.DropTable(
                 name: "PrestamoDetalle");
+
+            migrationBuilder.DropTable(
+                name: "Usuarios");
 
             migrationBuilder.DropTable(
                 name: "Empleados");

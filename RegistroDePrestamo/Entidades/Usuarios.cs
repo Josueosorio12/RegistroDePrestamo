@@ -12,11 +12,11 @@ namespace RegistroDePrestamo.Entidades
         [Key]
         public int UsuarioId { get; set; }
         public DateTime FechaIngreso { get; set; } = DateTime.Now;
-        public String Alias { get; set; }
-        public String Nombre { get; set; }
-        public String Email { get; set; }
-        public String Clave { get; set; }
-        public String RolID { get; set; }
-        public String Activo { get; set; }
+        public string Alias { get; set; }
+        public string Nombres { get; set; }
+        public string Email { get; set; }
+        public string Clave { get; set; }
+        public string RolID { get; set; }
+        public string Activo { get; set; }
     }
 }

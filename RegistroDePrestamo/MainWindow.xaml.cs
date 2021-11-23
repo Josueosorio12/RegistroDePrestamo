@@ -60,5 +60,17 @@ namespace RegistroDePrestamo
             cEmpleado cEmpleado = new cEmpleado();
             cEmpleado.Show();
         }
+
+        private void MenuItem_Click_6(object sender, RoutedEventArgs e)
+        {
+            rUsuario rUsuario = new rUsuario();
+            rUsuario.Show();
+        }
+
+        private void MenuItem_Click_7(object sender, RoutedEventArgs e)
+        {
+            cUsuarios cUsuarios = new cUsuarios();
+            cUsuarios.Show();
+        }
     }
 }
