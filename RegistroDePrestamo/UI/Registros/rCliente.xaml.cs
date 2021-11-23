@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RegistroDePrestamo.BLL;
+using RegistroDePrestamo.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +21,7 @@ namespace RegistroDePrestamo.UI.Registros
     /// </summary>
     public partial class rCliente : Window
     {
+       
         public rCliente()
         {
             InitializeComponent();
@@ -26,22 +29,23 @@ namespace RegistroDePrestamo.UI.Registros
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
+
     }
 }

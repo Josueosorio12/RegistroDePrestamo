@@ -34,6 +34,6 @@ namespace RegistroDePrestamo.Entidades
         public string TelefonoReferencia { get; set; }
         public string Parentesco { get; set; }
 
-
+        public virtual List<PrestamoDetalle> Detalles { get; set; } = new List<PrestamoDetalle>();
     }
 }
