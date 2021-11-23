@@ -152,6 +152,9 @@ namespace RegistroDePrestamo.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int?>("ClientesCodigoCliente")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int?>("EmpleadosCodigoEmpleado")
                         .HasColumnType("INTEGER");
 
@@ -171,6 +174,8 @@ namespace RegistroDePrestamo.Migrations
                         .HasColumnType("REAL");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ClientesCodigoCliente");
 
                     b.HasIndex("EmpleadosCodigoEmpleado");
 
@@ -267,7 +272,7 @@ namespace RegistroDePrestamo.Migrations
                             Prestamoid = 1,
                             Apellidos = "Almonte",
                             Contrasena = "e1ab9d7f0b137ad16566742ad38863ec42b6d7fba157ef51638e60a4e044bd13",
-                            FechaRegistro = new DateTime(2021, 11, 22, 22, 23, 48, 835, DateTimeKind.Local).AddTicks(803),
+                            FechaRegistro = new DateTime(2021, 11, 23, 16, 22, 20, 733, DateTimeKind.Local).AddTicks(8085),
                             Interes = 0f,
                             MontoCuota = 0f,
                             MontoPrestamo = 0f,
@@ -314,6 +319,10 @@ namespace RegistroDePrestamo.Migrations
 
             modelBuilder.Entity("RegistroDePrestamo.Entidades.PrestamoDetalle", b =>
                 {
+                    b.HasOne("RegistroDePrestamo.Entidades.Clientes", null)
+                        .WithMany("Detalles")
+                        .HasForeignKey("ClientesCodigoCliente");
+
                     b.HasOne("RegistroDePrestamo.Entidades.Empleados", null)
                         .WithMany("Detalles")
                         .HasForeignKey("EmpleadosCodigoEmpleado");
@@ -325,6 +334,11 @@ namespace RegistroDePrestamo.Migrations
                         .IsRequired();
 
                     b.Navigation("Prestamos");
+                });
+
+            modelBuilder.Entity("RegistroDePrestamo.Entidades.Clientes", b =>
+                {
+                    b.Navigation("Detalles");
                 });
 
             modelBuilder.Entity("RegistroDePrestamo.Entidades.Empleados", b =>
