@@ -72,5 +72,11 @@ namespace RegistroDePrestamo
             cUsuarios cUsuarios = new cUsuarios();
             cUsuarios.Show();
         }
+
+        private void MenuItem_Click_8(object sender, RoutedEventArgs e)
+        {
+            cCliente cCliente = new cCliente();
+            cCliente.Show();
+        }
     }
 }

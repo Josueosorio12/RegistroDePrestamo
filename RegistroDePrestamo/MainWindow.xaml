@@ -19,6 +19,7 @@
                 </MenuItem>
 
                 <MenuItem Header="Cosultas" Click="MenuItem_Click_1">
+                     <MenuItem Header="Consulta de Clientes" Click="MenuItem_Click_8"/>
                     <MenuItem Header="Consulta de Empleados" Click="MenuItem_Click_5"/>
                     <MenuItem Header="Consulta de Usuarios" Click="MenuItem_Click_7"/>
                 </MenuItem>
