@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace RegistroDePrestamo.UI.Consultas
+namespace RegistroDePrestamo.UI.Registros
 {
     /// <summary>
-    /// Interaction logic for rUsuarios.xaml
+    /// Interaction logic for rUsuario.xaml
     /// </summary>
-    public partial class rUsuarios : Window
+    public partial class rUsuario : Window
     {
-        public rUsuarios()
+        public rUsuario()
         {
             InitializeComponent();
         }
