@@ -14,6 +14,8 @@ namespace RegistroDePrestamo.DAL
         public DbSet<Prestamos> Prestamos { get; set; }
         public DbSet<Empleados> Empleados { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
+        public DbSet<Cuota> Cuota { get; set; }
+
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

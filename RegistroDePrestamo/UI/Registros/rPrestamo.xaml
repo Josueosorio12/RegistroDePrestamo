@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroDePrestamo.UI.Registros"
         mc:Ignorable="d"
-        Title="rPrestamo" Height="744" Width="809">
+        Title="rPrestamo" Height="705" Width="803">
     <Grid>
         <StackPanel>
 
@@ -137,34 +137,23 @@
 
             <StackPanel Orientation="Horizontal" Margin="10">
                 <Label Content="Monto por Cuota" Width="100"/>
-                <TextBox x:Name="MontoCuotaTextBox" Text="{Binding Detalle.MontoCuota}" Margin="5" Height="30" Width="129"/>
+                <TextBox x:Name="MontoCuotaTextBox" Text="{Binding MontoCuota}" Margin="5" Height="30" Width="129"/>
                 <TextBlock></TextBlock>
                 <Label Content="Total Intereses"/>
-                <TextBox x:Name="TotalInteresTextBox" Text="{Binding Detalle.TotalIntereses}" Margin="5" Height="30" Width="100"/>
+                <TextBox x:Name="TotalInteresTextBox" Text="{Binding TotalIntereses}" Margin="5" Height="30" Width="100"/>
 
                 <Label Content="Monto Total a pagar"/>
-                <TextBox x:Name="MontoTotalTextBox" Text="{Binding Detalle.MontoTotal}" Margin="5" Height="30" Width="173"/>
+                <TextBox x:Name="MontoTotalTextBox" Text="{Binding MontoTotal}" Margin="5" Height="30" Width="173"/>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Width="308">
-                <Button x:Name="AgregarButton" Click="AgregarButton_Click" Width="110" Height="30" Margin="5">
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="Agregar Fila"/>
-                        <Image Source="/Resources/Agregar.png"/>
 
-
-                    </StackPanel>
-                </Button>
-
-
-            </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5" Width="632">
-                <DataGrid x:Name="DatosPretamosGrid"  AutoGenerateColumns="False" Width="632" Height="141" ItemsSource="{Binding Detalle}">
+                <DataGrid x:Name="DatosPretamosGrid"  AutoGenerateColumns="False" Width="632" Height="141">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Nº Cuota" Binding="{Binding NumeroCuota}"/>
-                        <DataGridTextColumn Header="Interese" Binding="{Binding TotalIntereses}"/>
-                        <DataGridTextColumn Header="Capital" Binding="{Binding MontoPrestamo}"/>
-                        <DataGridTextColumn Header="Monto Total a Pagar" Binding="{Binding MontoTotal}"/>
+                        <DataGridTextColumn Header="Interese" Binding="{Binding Interes}"/>
+                        <DataGridTextColumn Header="Capital" Binding="{Binding Capital}"/>
+                        <DataGridTextColumn Header="Monto Total a Pagar" Binding="{Binding Total}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>

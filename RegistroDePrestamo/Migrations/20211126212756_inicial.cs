@@ -123,6 +123,30 @@ namespace RegistroDePrestamo.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Cuota",
+                columns: table => new
+                {
+                    IdCuota = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Prestamoid = table.Column<int>(type: "INTEGER", nullable: true),
+                    NumeroCuota = table.Column<int>(type: "INTEGER", nullable: false),
+                    FechaPagoCuota = table.Column<string>(type: "TEXT", nullable: true),
+                    Interes = table.Column<float>(type: "REAL", nullable: false),
+                    Capital = table.Column<float>(type: "REAL", nullable: false),
+                    Total = table.Column<float>(type: "REAL", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Cuota", x => x.IdCuota);
+                    table.ForeignKey(
+                        name: "FK_Cuota_Prestamos_Prestamoid",
+                        column: x => x.Prestamoid,
+                        principalTable: "Prestamos",
+                        principalColumn: "Prestamoid",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "PrestamoDetalle",
                 columns: table => new
                 {
@@ -133,6 +157,7 @@ namespace RegistroDePrestamo.Migrations
                     MontoCuota = table.Column<float>(type: "REAL", nullable: false),
                     TotalIntereses = table.Column<float>(type: "REAL", nullable: false),
                     MontoTotal = table.Column<float>(type: "REAL", nullable: false),
+                    PrestamosPrestamoid = table.Column<int>(type: "INTEGER", nullable: true),
                     ClientesCodigoCliente = table.Column<int>(type: "INTEGER", nullable: true),
                     EmpleadosCodigoEmpleado = table.Column<int>(type: "INTEGER", nullable: true)
                 },
@@ -152,17 +177,22 @@ namespace RegistroDePrestamo.Migrations
                         principalColumn: "CodigoEmpleado",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_PrestamoDetalle_Prestamos_Prestamoid",
-                        column: x => x.Prestamoid,
+                        name: "FK_PrestamoDetalle_Prestamos_PrestamosPrestamoid",
+                        column: x => x.PrestamosPrestamoid,
                         principalTable: "Prestamos",
                         principalColumn: "Prestamoid",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.InsertData(
                 table: "Prestamos",
                 columns: new[] { "Prestamoid", "Apellidos", "Celular", "Ciudad", "Contrasena", "Direccion", "Email", "EstadoCivil", "FechaRegistro", "FormaPago", "Interes", "LugarTrabajo", "MontoCuota", "MontoPrestamo", "MontoTotal", "NombreDeUsuario", "Nombres", "NumeroCuota", "NumeroDocumento", "Ocupacion", "Sexo", "SueldoMensual", "Telefono", "TipoDocumento", "TotalIntereses" },
-                values: new object[] { 1, "Almonte", null, null, "e1ab9d7f0b137ad16566742ad38863ec42b6d7fba157ef51638e60a4e044bd13", null, null, null, new DateTime(2021, 11, 23, 16, 22, 20, 733, DateTimeKind.Local).AddTicks(8085), null, 0f, null, 0f, 0f, 0f, "Profesor", "Enel", 0, null, null, null, 0, null, null, 0f });
+                values: new object[] { 1, "Almonte", null, null, "e1ab9d7f0b137ad16566742ad38863ec42b6d7fba157ef51638e60a4e044bd13", null, null, null, new DateTime(2021, 11, 26, 17, 27, 55, 335, DateTimeKind.Local).AddTicks(7282), null, 0f, null, 0f, 0f, 0f, "Profesor", "Enel", 0, null, null, null, 0, null, null, 0f });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Cuota_Prestamoid",
+                table: "Cuota",
+                column: "Prestamoid");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PrestamoDetalle_ClientesCodigoCliente",
@@ -175,13 +205,16 @@ namespace RegistroDePrestamo.Migrations
                 column: "EmpleadosCodigoEmpleado");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PrestamoDetalle_Prestamoid",
+                name: "IX_PrestamoDetalle_PrestamosPrestamoid",
                 table: "PrestamoDetalle",
-                column: "Prestamoid");
+                column: "PrestamosPrestamoid");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Cuota");
+
             migrationBuilder.DropTable(
                 name: "PrestamoDetalle");
 

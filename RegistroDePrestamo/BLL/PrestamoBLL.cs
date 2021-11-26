@@ -53,7 +53,7 @@ namespace RegistroDePrestamo.BLL
                 {
                     contexto.Entry(item).State = EntityState.Added;
 
-                    contexto.Entry(item.Prestamos).State = EntityState.Modified;
+                    contexto.Entry(item.oPrestamo).State = EntityState.Modified;
                 }
 
                 contexto.Entry(prestamo).State = EntityState.Modified;

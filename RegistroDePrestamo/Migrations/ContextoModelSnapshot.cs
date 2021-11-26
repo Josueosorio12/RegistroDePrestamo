@@ -84,6 +84,37 @@ namespace RegistroDePrestamo.Migrations
                     b.ToTable("Clientes");
                 });
 
+            modelBuilder.Entity("RegistroDePrestamo.Entidades.Cuota", b =>
+                {
+                    b.Property<int>("IdCuota")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<float>("Capital")
+                        .HasColumnType("REAL");
+
+                    b.Property<string>("FechaPagoCuota")
+                        .HasColumnType("TEXT");
+
+                    b.Property<float>("Interes")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("NumeroCuota")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("Prestamoid")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<float>("Total")
+                        .HasColumnType("REAL");
+
+                    b.HasKey("IdCuota");
+
+                    b.HasIndex("Prestamoid");
+
+                    b.ToTable("Cuota");
+                });
+
             modelBuilder.Entity("RegistroDePrestamo.Entidades.Empleados", b =>
                 {
                     b.Property<int>("CodigoEmpleado")
@@ -170,6 +201,9 @@ namespace RegistroDePrestamo.Migrations
                     b.Property<int>("Prestamoid")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int?>("PrestamosPrestamoid")
+                        .HasColumnType("INTEGER");
+
                     b.Property<float>("TotalIntereses")
                         .HasColumnType("REAL");
 
@@ -179,7 +213,7 @@ namespace RegistroDePrestamo.Migrations
 
                     b.HasIndex("EmpleadosCodigoEmpleado");
 
-                    b.HasIndex("Prestamoid");
+                    b.HasIndex("PrestamosPrestamoid");
 
                     b.ToTable("PrestamoDetalle");
                 });
@@ -272,7 +306,7 @@ namespace RegistroDePrestamo.Migrations
                             Prestamoid = 1,
                             Apellidos = "Almonte",
                             Contrasena = "e1ab9d7f0b137ad16566742ad38863ec42b6d7fba157ef51638e60a4e044bd13",
-                            FechaRegistro = new DateTime(2021, 11, 23, 16, 22, 20, 733, DateTimeKind.Local).AddTicks(8085),
+                            FechaRegistro = new DateTime(2021, 11, 26, 17, 27, 55, 335, DateTimeKind.Local).AddTicks(7282),
                             Interes = 0f,
                             MontoCuota = 0f,
                             MontoPrestamo = 0f,
@@ -317,6 +351,15 @@ namespace RegistroDePrestamo.Migrations
                     b.ToTable("Usuarios");
                 });
 
+            modelBuilder.Entity("RegistroDePrestamo.Entidades.Cuota", b =>
+                {
+                    b.HasOne("RegistroDePrestamo.Entidades.Prestamos", "oPrestamo")
+                        .WithMany("Detalle")
+                        .HasForeignKey("Prestamoid");
+
+                    b.Navigation("oPrestamo");
+                });
+
             modelBuilder.Entity("RegistroDePrestamo.Entidades.PrestamoDetalle", b =>
                 {
                     b.HasOne("RegistroDePrestamo.Entidades.Clientes", null)
@@ -328,10 +371,8 @@ namespace RegistroDePrestamo.Migrations
                         .HasForeignKey("EmpleadosCodigoEmpleado");
 
                     b.HasOne("RegistroDePrestamo.Entidades.Prestamos", "Prestamos")
-                        .WithMany("Detalle")
-                        .HasForeignKey("Prestamoid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany()
+                        .HasForeignKey("PrestamosPrestamoid");
 
                     b.Navigation("Prestamos");
                 });

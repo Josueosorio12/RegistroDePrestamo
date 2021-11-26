@@ -15,8 +15,8 @@ namespace RegistroDePrestamo.Entidades
         public Prestamos oPrestamo { get; set; }
         public int NumeroCuota { get; set; }
         public string FechaPagoCuota { get; set; }
-        public float MontoCuota { get; set; }
-        public string EstadoCuota { get; set; }
-        public int ProximoPago { get; set; }
+        public float Interes { get; set; }
+        public float Capital { get; set; }
+        public float Total { get; set; }
     }
 }

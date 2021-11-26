@@ -12,7 +12,6 @@ namespace RegistroDePrestamo.Entidades
     {
         [Key]
         public int Prestamoid { get; set; }
-        //public string Detalle { get; set; }
         public DateTime FechaRegistro { get; set; } = DateTime.Now;
         //Datos del cliente
         public string Nombres { get; set; }
@@ -42,6 +41,6 @@ namespace RegistroDePrestamo.Entidades
 
         [ForeignKey("Prestamoid")]
 
-        public virtual List<PrestamoDetalle> Detalle { get; set; } = new List<PrestamoDetalle>();
+        public virtual List<Cuota> Detalle { get; set; } = new List<Cuota>();
     }
 }
