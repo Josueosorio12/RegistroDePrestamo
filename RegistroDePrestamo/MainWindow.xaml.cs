@@ -96,5 +96,11 @@ namespace RegistroDePrestamo
             rCobro rCobro = new rCobro();
             rCobro.Show();
         }
+
+        private void MenuItem_Click_12(object sender, RoutedEventArgs e)
+        {
+            rRoles rRoles = new rRoles();
+            rRoles.Show();
+        }
     }
 }
