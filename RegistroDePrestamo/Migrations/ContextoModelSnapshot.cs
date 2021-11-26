@@ -306,7 +306,7 @@ namespace RegistroDePrestamo.Migrations
                             Prestamoid = 1,
                             Apellidos = "Almonte",
                             Contrasena = "e1ab9d7f0b137ad16566742ad38863ec42b6d7fba157ef51638e60a4e044bd13",
-                            FechaRegistro = new DateTime(2021, 11, 26, 17, 27, 55, 335, DateTimeKind.Local).AddTicks(7282),
+                            FechaRegistro = new DateTime(2021, 11, 26, 18, 8, 36, 693, DateTimeKind.Local).AddTicks(7567),
                             Interes = 0f,
                             MontoCuota = 0f,
                             MontoPrestamo = 0f,
@@ -317,6 +317,20 @@ namespace RegistroDePrestamo.Migrations
                             SueldoMensual = 0,
                             TotalIntereses = 0f
                         });
+                });
+
+            modelBuilder.Entity("RegistroDePrestamo.Entidades.Roles", b =>
+                {
+                    b.Property<int>("RolId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("RolId");
+
+                    b.ToTable("Roles");
                 });
 
             modelBuilder.Entity("RegistroDePrestamo.Entidades.Usuarios", b =>
