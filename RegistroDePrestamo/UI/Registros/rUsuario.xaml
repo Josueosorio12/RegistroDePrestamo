@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroDePrestamo.UI.Registros"
         mc:Ignorable="d"
-        Title="rUsuario" Height="479" Width="781">
+        Title="rUsuario" Height="408" Width="769">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10,10,19,11" RenderTransformOrigin="0.5,0.5">
             <StackPanel.RenderTransform>
@@ -54,15 +54,7 @@
 
                 <Label Content="Clave:"/>
                 <TextBox x:Name="ClaveTexBox"  Text="{Binding Clave}"/>
-                <StackPanel>
-                    <Label Content="Rol ID:"/>
-                    <ComboBox x:Name="RolID" Height="26" Width="865" Text="{Binding RolID}">
-                        <Label Content="Administrador"/>
-                        <Label Content="Secretaria"/>
-                        <Label Content="Supervisor"/>
-                    </ComboBox>
 
-                </StackPanel>
 
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="72" Width="774">

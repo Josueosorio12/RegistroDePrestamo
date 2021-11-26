@@ -28,13 +28,12 @@
 
                 <DataGrid x:Name="DatosDataGrid" Height="355" Width="583" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Registro Id:" Binding="{Binding UsuarioId}"/>
+                        <DataGridTextColumn Header="Usuario Id:" Binding="{Binding UsuarioId}"/>
                         <DataGridTextColumn Header="Fecha:" Binding="{Binding FechaIngreso}"/>
                         <DataGridTextColumn Header="Alias:" Binding="{Binding Alias}"/>
                         <DataGridTextColumn Header="Nombres:" Binding="{Binding Nombres}"/>
                         <DataGridTextColumn Header="Email:" Binding="{Binding Email}"/>
                         <DataGridTextColumn Header="Clave:" Binding="{Binding Clave}"/>
-                        <DataGridTextColumn Header="Rol Id:" Binding="{Binding RolID}"/>
                         <DataGridTextColumn Header="Activo:" Binding="{Binding Activo}"/>
                     </DataGrid.Columns>
                 </DataGrid>
