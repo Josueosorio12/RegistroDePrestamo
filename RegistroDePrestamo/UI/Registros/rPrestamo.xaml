@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:PasswordHelper="clr-namespace:RegistroDePrestamo.PasswordHelper" 
         xmlns:local="clr-namespace:RegistroDePrestamo.UI.Registros"
         mc:Ignorable="d"
         Title="rPrestamo" Height="705" Width="803">
