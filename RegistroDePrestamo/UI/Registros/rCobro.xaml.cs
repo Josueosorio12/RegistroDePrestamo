@@ -31,6 +31,36 @@ namespace RegistroDePrestamo.UI.Registros
 
         private void PagarButton_Click(object sender, RoutedEventArgs e)
         {
+           /*
+              string mensaje = string.Empty;
+
+            if (Convert.ToInt32(txtidprestamo.Text) == 0)
+            {
+                MessageBox.Show("No se encontraron datos", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+
+            int nrooperaciones = PrestamoLogica.Instancia.Pagar(new Cuota()
+            {
+                IdCuota = Convert.ToInt32(txtidcuota.Text),
+                FechaPago = DateTime.Now.ToString("yyyy-MM-dd", new CultureInfo("en-US")),
+                NumeroCuota = Convert.ToInt32(txtcuotapagar.Text)
+            },
+                Convert.ToInt32(txtidprestamo.Text),
+                Convert.ToInt32(txtnrocuotas.Text),
+                out mensaje
+            );
+
+            if (nrooperaciones < 1)
+            {
+                MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                limpiar(true);
+                MessageBox.Show("Se registro el pago correctamente\nPuedes descargar el recibo en \"Historial Préstamo\"", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }*/
 
         }
 

@@ -39,6 +39,7 @@ namespace RegistroDePrestamo.UI.Registros
         List<Cuota> Amortizacion = new List<Cuota>();
 
         private Prestamos prestamos = new Prestamos();
+        private PrestamoDetalle Detalle = new PrestamoDetalle();
         public rPrestamo()
         {
             InitializeComponent();

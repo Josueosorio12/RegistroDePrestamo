@@ -149,9 +149,9 @@
 
 
             <StackPanel Orientation="Horizontal" Margin="5" Width="632">
-                <DataGrid x:Name="DatosPretamosGrid"  AutoGenerateColumns="False" Width="632" Height="141">
+                <DataGrid x:Name="DatosPretamosGrid"  AutoGenerateColumns="False" Width="632" Height="141" ItemsSource="{Binding Detalle}">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Nº Cuota" Binding="{Binding NumeroCuota}"/>
+                        <DataGridTextColumn Header="Nº Cuota" Binding="{Binding Id}"/>
                         <DataGridTextColumn Header="Interese" Binding="{Binding Interes}"/>
                         <DataGridTextColumn Header="Capital" Binding="{Binding Capital}"/>
                         <DataGridTextColumn Header="Monto Total a Pagar" Binding="{Binding Total}"/>

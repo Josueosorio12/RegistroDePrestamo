@@ -37,8 +37,8 @@ namespace RegistroDePrestamo.UI.Registros
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-           /* if (!Validar())
-                return;*/
+            if (!Validar())
+                return;
             bool paso = false;
 
             if (clientes.CodigoCliente == 0)
@@ -117,7 +117,7 @@ namespace RegistroDePrestamo.UI.Registros
             return (esValido != null);
         }
 
-      /*  private bool Validar()
+        private bool Validar()
         {
             bool esValido = true;
 
@@ -223,6 +223,6 @@ namespace RegistroDePrestamo.UI.Registros
                 MessageBox.Show("Favor LLenar el campo Parestesco Referencia", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             return esValido;
-        }*/
+        }
     }
 }

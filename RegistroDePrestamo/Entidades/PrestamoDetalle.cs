@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace RegistroDePrestamo.Entidades
         public float TotalIntereses { get; set; }
         public float MontoTotal { get; set; }
 
-
+        [ForeignKey("Prestamoid")]
         public Prestamos Prestamos { get; set; }
 
         public PrestamoDetalle()
