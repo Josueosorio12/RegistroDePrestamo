@@ -38,6 +38,7 @@ namespace RegistroDePrestamo.Entidades
         public float MontoTotal { get; set; }
         public string Contrasena { get; set; }
         public string NombreDeUsuario { get; set; }
+        public int Mora { get; set; }
 
         [ForeignKey("Prestamoid")]
 
