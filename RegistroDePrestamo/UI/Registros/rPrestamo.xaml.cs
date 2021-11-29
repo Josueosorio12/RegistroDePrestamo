@@ -120,9 +120,6 @@ namespace RegistroDePrestamo.UI.Registros
 
         private void AgregarCuotaButton_Click(object sender, RoutedEventArgs e)
         {
-            var Listado = new List<PrestamoBLL>();
-
-
             float ResultadoDivision = 0;
             float Residuo = 0;
             float MontoIntere = 0;
