@@ -27,6 +27,7 @@
                     <MenuItem Header="Consulta General Prestamo" Click="MenuItem_Click_10"/>
                     <MenuItem Header="Consulta de Empleados" Click="MenuItem_Click_5"/>
                     <MenuItem Header="Consulta de Usuarios" Click="MenuItem_Click_7"/>
+                    <MenuItem Header="Consulta de Mora" Click="MenuItem_Click_14"/>
                 </MenuItem>
 
 

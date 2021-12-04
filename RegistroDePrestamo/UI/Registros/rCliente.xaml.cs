@@ -131,11 +131,7 @@ namespace RegistroDePrestamo.UI.Registros
                 esValido = false;
                 MessageBox.Show("Favor LLenar el campo apellido", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            if (TipoDocumentoComboBox.SelectedIndex == 0)
-            {
-                esValido = false;
-                MessageBox.Show("Favor LLenar el campo tipo documento", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
+           
 
             if (NumeroDocumentoTextBox.Text.Length == 0)
             {
@@ -167,16 +163,8 @@ namespace RegistroDePrestamo.UI.Registros
                 esValido = false;
                 MessageBox.Show("Favor LLenar el campo celular", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            if (SexoComboBox.SelectedIndex == 0)
-            {
-                esValido = false;
-                MessageBox.Show("Favor LLenar el campo sexo ", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
-            if (EstadoCivilComboBox.SelectedIndex == 0)
-            {
-                esValido = false;
-                MessageBox.Show("Favor LLenar el campo estado  civil", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
+           
+           
             if (OcupacionTextBox.Text.Length == 0)
             {
                 esValido = false;

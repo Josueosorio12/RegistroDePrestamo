@@ -108,5 +108,11 @@ namespace RegistroDePrestamo
             rMoras rMoras = new rMoras();
             rMoras.Show();
         }
+
+        private void MenuItem_Click_14(object sender, RoutedEventArgs e)
+        {
+            cMora cMora = new cMora();
+            cMora.Show();
+        }
     }
 }
