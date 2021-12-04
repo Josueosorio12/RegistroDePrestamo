@@ -16,7 +16,6 @@
 
                 <Label Content="Fecha Registro:" Height="38"/>
                 <DatePicker  SelectedDate="{Binding FechaRegistro}" Width="130"  Height="30" Margin="5"/>
-
                 <Button x:Name="BuscarButton" Click="BuscarButton_Click" Width="78" Height="30">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Buscar"/>

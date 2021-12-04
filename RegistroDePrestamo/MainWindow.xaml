@@ -17,6 +17,7 @@
                     <MenuItem Header="Registro De Usuarios" Click="MenuItem_Click_6"/>
                     <MenuItem Header="Registro De Cobro" Click="MenuItem_Click_11"/>
                     <MenuItem Header="Registro De Roles" Click="MenuItem_Click_12"/>
+                    <MenuItem Header="Registro De  Mora" Click="MenuItem_Click_13"/>
 
                 </MenuItem>
 

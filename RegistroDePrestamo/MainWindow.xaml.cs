@@ -102,5 +102,11 @@ namespace RegistroDePrestamo
             rRoles rRoles = new rRoles();
             rRoles.Show();
         }
+
+        private void MenuItem_Click_13(object sender, RoutedEventArgs e)
+        {
+            rMoras rMoras = new rMoras();
+            rMoras.Show();
+        }
     }
 }
