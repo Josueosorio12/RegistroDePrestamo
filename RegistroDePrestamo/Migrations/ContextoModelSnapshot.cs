@@ -343,16 +343,33 @@ namespace RegistroDePrestamo.Migrations
                         new
                         {
                             Prestamoid = 1,
-                            Apellidos = "Almonte",
-                            Contrasena = "e1ab9d7f0b137ad16566742ad38863ec42b6d7fba157ef51638e60a4e044bd13",
-                            FechaRegistro = new DateTime(2021, 11, 29, 17, 34, 12, 930, DateTimeKind.Local).AddTicks(2292),
+                            Apellidos = "Osorio",
+                            Contrasena = "952152105eb089236d0a4e37344a7a65323ce4f1d4016a6fbad3433b5122ff9b",
+                            FechaRegistro = new DateTime(2021, 12, 6, 20, 57, 30, 149, DateTimeKind.Local).AddTicks(7965),
                             Interes = 0f,
                             MontoCuota = 0f,
                             MontoPrestamo = 0f,
                             MontoTotal = 0f,
                             Mora = 0,
-                            NombreDeUsuario = "Profesor",
-                            Nombres = "Enel",
+                            NombreDeUsuario = "JosueO",
+                            Nombres = "Josue",
+                            NumeroCuota = 0,
+                            SueldoMensual = 0,
+                            TotalIntereses = 0f
+                        },
+                        new
+                        {
+                            Prestamoid = 2,
+                            Apellidos = "Diaz",
+                            Contrasena = "72bfda8ad26e77fa13f7fbcbd15ca12877f62354c6e57ba27ce2bfcaa1a359f1",
+                            FechaRegistro = new DateTime(2021, 12, 6, 20, 57, 30, 167, DateTimeKind.Local).AddTicks(8909),
+                            Interes = 0f,
+                            MontoCuota = 0f,
+                            MontoPrestamo = 0f,
+                            MontoTotal = 0f,
+                            Mora = 0,
+                            NombreDeUsuario = "Rdiaz",
+                            Nombres = "Reny",
                             NumeroCuota = 0,
                             SueldoMensual = 0,
                             TotalIntereses = 0f

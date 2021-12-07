@@ -235,7 +235,12 @@ namespace RegistroDePrestamo.Migrations
             migrationBuilder.InsertData(
                 table: "Prestamos",
                 columns: new[] { "Prestamoid", "Apellidos", "Celular", "Ciudad", "Contrasena", "Direccion", "Email", "EstadoCivil", "FechaRegistro", "FormaPago", "Interes", "LugarTrabajo", "MontoCuota", "MontoPrestamo", "MontoTotal", "Mora", "NombreDeUsuario", "Nombres", "NumeroCuota", "NumeroDocumento", "Ocupacion", "Sexo", "SueldoMensual", "Telefono", "TipoDocumento", "TotalIntereses" },
-                values: new object[] { 1, "Almonte", null, null, "e1ab9d7f0b137ad16566742ad38863ec42b6d7fba157ef51638e60a4e044bd13", null, null, null, new DateTime(2021, 11, 29, 17, 34, 12, 930, DateTimeKind.Local).AddTicks(2292), null, 0f, null, 0f, 0f, 0f, 0, "Profesor", "Enel", 0, null, null, null, 0, null, null, 0f });
+                values: new object[] { 1, "Osorio", null, null, "952152105eb089236d0a4e37344a7a65323ce4f1d4016a6fbad3433b5122ff9b", null, null, null, new DateTime(2021, 12, 6, 20, 57, 30, 149, DateTimeKind.Local).AddTicks(7965), null, 0f, null, 0f, 0f, 0f, 0, "JosueO", "Josue", 0, null, null, null, 0, null, null, 0f });
+
+            migrationBuilder.InsertData(
+                table: "Prestamos",
+                columns: new[] { "Prestamoid", "Apellidos", "Celular", "Ciudad", "Contrasena", "Direccion", "Email", "EstadoCivil", "FechaRegistro", "FormaPago", "Interes", "LugarTrabajo", "MontoCuota", "MontoPrestamo", "MontoTotal", "Mora", "NombreDeUsuario", "Nombres", "NumeroCuota", "NumeroDocumento", "Ocupacion", "Sexo", "SueldoMensual", "Telefono", "TipoDocumento", "TotalIntereses" },
+                values: new object[] { 2, "Diaz", null, null, "72bfda8ad26e77fa13f7fbcbd15ca12877f62354c6e57ba27ce2bfcaa1a359f1", null, null, null, new DateTime(2021, 12, 6, 20, 57, 30, 167, DateTimeKind.Local).AddTicks(8909), null, 0f, null, 0f, 0f, 0f, 0, "Rdiaz", "Reny", 0, null, null, null, 0, null, null, 0f });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Cuota_Prestamoid",

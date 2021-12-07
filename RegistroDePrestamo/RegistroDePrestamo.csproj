@@ -66,6 +66,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="DAL\Contexto.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -82,7 +85,7 @@
 
   <ItemGroup>
     <None Update="DATA\Prestamo.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

@@ -28,12 +28,24 @@ namespace RegistroDePrestamo.DAL
             modelBuilder.Entity<Prestamos>().HasData(new Prestamos
             {
                 Prestamoid = 1,
-                Nombres = "Enel",
-                Apellidos = "Almonte",
-                NombreDeUsuario = "Profesor",
-                Contrasena = "e1ab9d7f0b137ad16566742ad38863ec42b6d7fba157ef51638e60a4e044bd13"
-                //Contrasena: cortina123
+                Nombres = "Josue",
+                Apellidos = "Osorio",
+                NombreDeUsuario = "JosueO",
+                Contrasena = "952152105eb089236d0a4e37344a7a65323ce4f1d4016a6fbad3433b5122ff9b"
+                //Contrasena: Josue123
             });
+
+            modelBuilder.Entity<Prestamos>().HasData(new Prestamos
+            {
+                Prestamoid = 2,
+                Nombres = "Reny",
+                Apellidos = "Diaz",
+                NombreDeUsuario = "Rdiaz",
+                Contrasena = "72bfda8ad26e77fa13f7fbcbd15ca12877f62354c6e57ba27ce2bfcaa1a359f1"
+                //Contrasena: Reny123
+            });
+
+
         }
     }
 }

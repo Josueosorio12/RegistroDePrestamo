@@ -16,7 +16,7 @@
 
                 <Label Content="Fecha Registro:" Height="38"/>
                 <DatePicker  SelectedDate="{Binding FechaRegistro}" Width="130"  Height="30" Margin="5"/>
-                <Button x:Name="BuscarButton" Click="BuscarButton_Click" Width="78" Height="30">
+                <Button x:Name="BuscarButton" Click="BuscarButton_Click"  Height="30">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Buscar"/>
                         <Image Source="/Resources/Buscar.png"/>
@@ -111,14 +111,13 @@
 
                             <Label Content="Forma De Pago" Width="104"/>
                             <ComboBox Name="FormaDePago" Width="130" Height="30" Text="{Binding FormaPago}">
-                                <ComboBoxItem Content="Quincenal"/>
                                 <ComboBoxItem Content="Mensual"/>
                             </ComboBox>
 
                             <Label Content="Nº Cuota"/>
                             <TextBox x:Name="NumeroCuotaTextBox" Text="{Binding NumeroCuota}" Margin="5" Height="30" Width="131"/>
 
-                            <Button x:Name="AgregarCuotaButton" Click="AgregarCuotaButton_Click" Width="131">
+                            <Button x:Name="AgregarCuotaButton" Click="AgregarCuotaButton_Click" >
                                 <StackPanel Orientation="Horizontal">
                                     <Label Content="Generar Cuota"/>
                                     <Image Source="/Resources/GenerarCuota.png" />

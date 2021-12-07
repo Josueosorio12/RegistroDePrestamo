@@ -27,8 +27,8 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
 
-                <TextBox x:Name="RegistroTextBox" Text="{Binding UsuarioId}" Width="110" Height="30" TextChanged="RegistroTextBox_TextChanged" Margin="5" ></TextBox>
-                <Button x:Name="Buscar"  Click="Buscar_Click" Width="110" Height="30">
+                <TextBox x:Name="RegistroTextBox" Text="{Binding UsuarioId}" Width="110" Height="30" Margin="5" ></TextBox>
+                <Button x:Name="Buscar"  Click="Buscar_Click" Width="110" Height="38">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Buscar"/>
                         <Image Source="/Resources/Buscar.png"/>
@@ -58,21 +58,21 @@
 
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="72" Width="774">
-                <Button x:Name="NuevoButton" Margin="5" Height="30" Width="110" Click="NuevoButton_Click">
+                <Button x:Name="NuevoButton" Margin="5" Height="40" Click="NuevoButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Nuevo"/>
                         <Image Source="/Resources/Nuevo.png"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="GuardarButton"  Margin="5" Height="30" Width="100" Click="GuardarButton_Click">
+                <Button x:Name="GuardarButton"  Margin="5" Height="45" Click="GuardarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Guardar"/>
                         <Image Source="/Resources/Guardar.png"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="EliminarButton"  Margin="5"  Height="30" Width="100" Click="EliminarButton_Click">
+                <Button x:Name="EliminarButton"  Margin="5"  Height="46"  Click="EliminarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Label  Content="Eliminar"/>
                         <Image Source="/Resources/Eliminar.png"/>

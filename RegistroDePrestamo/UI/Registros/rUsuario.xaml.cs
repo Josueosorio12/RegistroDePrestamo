@@ -41,10 +41,10 @@ namespace RegistroDePrestamo.UI.Registros
                 this.usuario = new Usuarios();
 
             this.DataContext = this.usuario;
-            
-                Limpiar();
-                MessageBox.Show("El Usuario no existe en la base de datos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            
+
+            Limpiar();
+            MessageBox.Show("El Usuario no existe en la base de datos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
@@ -117,16 +117,6 @@ namespace RegistroDePrestamo.UI.Registros
             }
 
             return esValido;
-        }
-
-        private void RegistroTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void GuardarButton_Click_1(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
