@@ -11,6 +11,7 @@ namespace RegistroDePrestamo.Entidades
     public class Moras
     {
         [Key]
+
         public int MoraId { get; set; }
         public DateTime Fecha { get; set; }
         public int Total { get; set; }

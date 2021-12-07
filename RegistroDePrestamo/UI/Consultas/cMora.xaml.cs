@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RegistroDePrestamo.BLL;
+using RegistroDePrestamo.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +28,45 @@ namespace RegistroDePrestamo.UI.Consultas
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
+            var listado = new List<Prestamos>();
+            
+            if (CriterioTextBox.Text.Trim().Length > 0)
+            {
+                switch (FiltroComboBox.SelectedIndex)
+                {
+                    case 1: //Nombre
+                        listado = PrestamoBLL.GetList(e => e.Nombres.ToLower().Contains(CriterioTextBox.Text.ToLower()));
+                        break;
+                    case 2: //Apellido
+                        listado = PrestamoBLL.GetList(e => e.Apellidos.ToLower().Contains(CriterioTextBox.Text.ToLower()));
+                        break;
+
+                    case 3: //Direccion
+                        listado = PrestamoBLL.GetList(e => e.Direccion.ToLower().Contains(CriterioTextBox.Text.ToLower()));
+                        break;
+
+                    case 4: //Celular
+                        listado = PrestamoBLL.GetList(e => e.Celular.ToLower().Contains(CriterioTextBox.Text.ToLower()));
+                        break;
+
+                   
+                }
+            }
+            else
+            {
+                listado = PrestamoBLL.GetList(e => true);
+            }
+
+            if (DesdeDataPicker.SelectedDate != null)
+                listado = PrestamoBLL.GetList(c => c.FechaRegistro.Date >= DesdeDataPicker.SelectedDate);
+
+            if (HastaDataPicker.SelectedDate != null)
+                listado = PrestamoBLL.GetList(c => c.FechaRegistro.Date <= HastaDataPicker.SelectedDate);
+
+            DatosDataGrid.ItemsSource = null;
+            DatosDataGrid.ItemsSource = listado;
 
         }
     }
+    
 }
