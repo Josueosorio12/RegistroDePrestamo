@@ -15,7 +15,7 @@
                         <ComboBoxItem x:Name="ListadoComboBoxItem" Content="Listado"/>
                     </ComboBox>
                 </StackPanel>
-                <Button x:Name="BuscarButton"  Height="30" Width="85" Margin="0,20,0,0" Click="BuscarButton_Click">
+                <Button x:Name="BuscarButton"  Height="39" Margin="0,20,0,0" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Buscar"/>
                         <Image Source="/Resources/Buscar.png"/>

@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroDePrestamo.UI.Registros"
         mc:Ignorable="d"
-        Title="rMoras" Height="450" Width="800">
+        Title="rMoras" Height="504" Width="860">
     <Grid>
         <StackPanel Orientation="Vertical">
             <!--ID-->
-            <StackPanel  Width="220" Margin="10,20,0,0" Orientation="Horizontal" HorizontalAlignment="Left">
+            <StackPanel   Margin="10,20,0,0" Orientation="Horizontal" HorizontalAlignment="Left">
                 <Label Content="Id:" />
                 <TextBox Width="95" Height="25" Margin="20,0,0,0" VerticalAlignment="Center" Text="{Binding MoraId}" />
 
-                <Button x:Name="BuscarButton" Click="BuscarButton_Click" Margin="10,0,0,0" Width="72">
+                <Button x:Name="BuscarButton" Click="BuscarButton_Click" Margin="10,0,0,0" >
                     <StackPanel Orientation="Horizontal">
                         <Image Source="\Resources\Buscar.png" Height="20"/>
                         <TextBlock>Buscar</TextBlock>
@@ -42,14 +42,14 @@
                             <TextBox x:Name="ValorTextBox" Height="25" Text="{Binding Valor}" Width="92" />
                         </StackPanel>
                         <!--Agregar Fila-->
-                        <Button x:Name="Agregar"   Margin="10,24,0,0" Width="77" Click="Agregar_Click" Height="27">
+                        <Button x:Name="Agregar"   Margin="10,24,0,0" Click="Agregar_Click" Height="38">
                             <StackPanel Orientation="Horizontal">
                                 <Label Content="Agregar"/>
                                 <Image Source="/Resources/Agregar.png" Height="20"/>
                             </StackPanel>
                         </Button>
                         <!--Remover Fila-->
-                        <Button x:Name="Remover"  Margin="10,24,0,0"  Width="89" Click="Remover_Click" Height="28">
+                        <Button x:Name="Remover"  Margin="10,24,0,0" Click="Remover_Click" Height="40">
                             <StackPanel Orientation="Horizontal">
                                 <Label Content="Remover"/>
                                 <Image Source="/Resources/Eliminar.png" Height="20"/>
@@ -78,22 +78,22 @@
             </GroupBox>
 
             <!--Botone-->
-            <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Width="300" HorizontalAlignment="Left">
-                <Button x:Name="NuevoButton"  Margin="10,0,0,0" Width="90" Click="NuevoButton_Click">
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Left">
+                <Button x:Name="NuevoButton"  Margin="10,0,0,0"  Click="NuevoButton_Click" Height="40">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="\Resources\nuevo.png" Height="20"/>
                         <Label Content="Nuevo"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="GuardarButton"  Margin="10,0,0,0" Width="90" Click="GuardarButton_Click">
+                <Button x:Name="GuardarButton"  Margin="10,0,0,0" Click="GuardarButton_Click" Height="37">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/Guardar.png" Height="20"/>
                         <Label Content="Guardar"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="EliminarButton"  Margin="10,0,0,0" Width="90" Click="EliminarButton_Click">
+                <Button x:Name="EliminarButton"  Margin="10,0,0,0"  Click="EliminarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/Eliminar.png" Height="20"/>
                         <Label Content="Eliminar"/>

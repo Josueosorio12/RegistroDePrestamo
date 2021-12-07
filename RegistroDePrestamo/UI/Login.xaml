@@ -6,7 +6,7 @@
         xmlns:PasswordHelper="clr-namespace:RegistroDePrestamo.PasswordHelper" 
         xmlns:local="clr-namespace:RegistroDePrestamo.UI"
         mc:Ignorable="d"
-        Title="Login" Height="183" Width="411">
+        Title="Login" Height="197" Width="421">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10,10,10,0">
             <StackPanel Orientation="Vertical" Height="166" Width="389">
@@ -20,14 +20,14 @@
 
 
                 <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
-                    <Button x:Name="IngresarButton" Click="IngresarButton_Click" Margin="10">
+                    <Button x:Name="IngresarButton" Click="IngresarButton_Click" Margin="10" Height="38">
                         <StackPanel Orientation="Horizontal">
 
                             <Label Content="Ingresar"/>
                             <Image Source="/Resources/Ingresar.png"/>
                         </StackPanel>
                     </Button>
-                    <Button x:Name="CancelarButton" Click="CancelarButton_Click" Margin="10" Height="36">
+                    <Button x:Name="CancelarButton" Click="CancelarButton_Click" Margin="10" Height="35">
                         <StackPanel Orientation="Horizontal">
 
                             <Label Content="Cancelar"/>

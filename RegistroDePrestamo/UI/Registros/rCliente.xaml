@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroDePrestamo.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Cliente" Height="568" Width="820">
+        Title="Registro de Cliente" Height="623" Width="875">
     <Grid>
         <StackPanel>
-            
+
             <StackPanel Orientation="Horizontal">
                 <Label Content="Codigo Cliente"/>
                 <TextBox x:Name="CodigoClienteTextBox" Text="{Binding CodigoCliente}" Width="110" Margin="5" Height="24"/>
@@ -131,17 +131,16 @@
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="GuardarButton" Click="GuardarButton_Click" Width="110" Margin="5">
+                <Button x:Name="GuardarButton" Click="GuardarButton_Click" Margin="5">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Guardar"/>
                         <Image Source="/Resources/Guardar.png"/>
                     </StackPanel>
                 </Button>
-
-                <Button x:Name="EliminarButton" Click="EliminarButton_Click" Width="110" Margin="5">
+                <Button x:Name="EliminarButton" Click="EliminarButton_Click" Height="38">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Eliminar"/>
-                        <Image Source="/Resources/Eliminar.png" Width="52" Height="33"/>
+                        <Image Source="/Resources/Eliminar.png" Width="26" Height="33"/>
                     </StackPanel>
                 </Button>
 

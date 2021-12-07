@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroDePrestamo.UI.Registros"
         mc:Ignorable="d"
-        Title="rEmpleado" Height="501" Width="795">
+        Title="rEmpleado" Height="586" Width="861">
     <Grid>
         <StackPanel>
 
@@ -16,7 +16,7 @@
                 <Label Content="Fecha:" Height="38"/>
                 <DatePicker  SelectedDate="{Binding FechaEmpleado}" Width="130"  Height="30" Margin="5"/>
 
-                <Button x:Name="BuscarButton" Click="BuscarButton_Click" Width="90" Height="30">
+                <Button x:Name="BuscarButton" Click="BuscarButton_Click"  Height="35">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Buscar"/>
                         <Image Source="/Resources/Buscar.png"/>
@@ -137,14 +137,14 @@
                 </GroupBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="NuevoButton" Click="NuevoButton_Click" Width="110" Height="30" Margin="5">
+                <Button x:Name="NuevoButton" Click="NuevoButton_Click" Height="38" Margin="5">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Nuevo"/>
                         <Image Source="/Resources/Nuevo.png"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="GuardarButton" Click="GuardarButton_Click" Width="110" Height="30" Margin="5">
+                <Button x:Name="GuardarButton" Click="GuardarButton_Click" Height="39" Margin="5">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Guardar"/>
                         <Image Source="/Resources/Guardar.png"/>
@@ -153,7 +153,7 @@
                 </Button>
 
 
-                <Button x:Name="EliminarButton" Click="EliminarButton_Click" Width="110" Height="30" Margin="5">
+                <Button x:Name="EliminarButton" Click="EliminarButton_Click"  Height="40" Margin="5">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Eliminar"/>
                         <Image Source="/Resources/Eliminar.png"/>

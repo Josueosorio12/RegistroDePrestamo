@@ -6,7 +6,7 @@
         xmlns:PasswordHelper="clr-namespace:RegistroDePrestamo.PasswordHelper" 
         xmlns:local="clr-namespace:RegistroDePrestamo.UI.Registros"
         mc:Ignorable="d"
-        Title="rPrestamo" Height="705" Width="803">
+        Title="rPrestamo" Height="789" Width="840">
     <Grid>
         <StackPanel>
 
@@ -118,7 +118,7 @@
                             <Label Content="Nº Cuota"/>
                             <TextBox x:Name="NumeroCuotaTextBox" Text="{Binding NumeroCuota}" Margin="5" Height="30" Width="131"/>
 
-                            <Button x:Name="AgregarCuotaButton" Click="AgregarCuotaButton_Click" Height="30" Width="131">
+                            <Button x:Name="AgregarCuotaButton" Click="AgregarCuotaButton_Click" Width="131">
                                 <StackPanel Orientation="Horizontal">
                                     <Label Content="Generar Cuota"/>
                                     <Image Source="/Resources/GenerarCuota.png" />
@@ -158,7 +158,7 @@
                 </DataGrid>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="10" Width="364">
+            <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment='Center'>
 
                 <Button x:Name="NuevoButton" Click="NuevoButton_Click" Width="110" Margin="5">
                     <StackPanel Orientation="Horizontal">
@@ -167,26 +167,19 @@
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="RegistrarButton" Click="RegistrarButton_Click" Width="110" Margin="5">
+                <Button x:Name="RegistrarButton" Click="RegistrarButton_Click"  Margin="5" >
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Registrar"/>
-                        <Image Source="/Resources/registrar.png" RenderTransformOrigin="0.5,0.5" Width="52" Height="32">
-                            <Image.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform ScaleX="-1"/>
-                                    <SkewTransform/>
-                                    <RotateTransform/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Image.RenderTransform>
+                        <Image Source="/Resources/registrar.png" Height="26">
+                        
                         </Image>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="EliminarButton" Click="EliminarButton_Click" Width="110" Margin="5">
+                <Button x:Name="EliminarButton" Click="EliminarButton_Click" Margin="5" >
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Eliminar"/>
-                        <Image Source="/Resources/Eliminar.png" Width="52" Height="33"/>
+                        <Image Source="/Resources/Eliminar.png"  Height="22"/>
                     </StackPanel>
                 </Button>
 
