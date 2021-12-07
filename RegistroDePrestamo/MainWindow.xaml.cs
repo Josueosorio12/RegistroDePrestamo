@@ -91,12 +91,6 @@ namespace RegistroDePrestamo
             cGeneralPrestamo.Show();
         }
 
-        private void MenuItem_Click_11(object sender, RoutedEventArgs e)
-        {
-            rCobro rCobro = new rCobro();
-            rCobro.Show();
-        }
-
         private void MenuItem_Click_12(object sender, RoutedEventArgs e)
         {
             rRoles rRoles = new rRoles();

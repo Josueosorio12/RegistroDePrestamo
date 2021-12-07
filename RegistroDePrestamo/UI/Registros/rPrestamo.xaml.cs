@@ -227,7 +227,7 @@ namespace RegistroDePrestamo.UI.Registros
                 MessageBox.Show("Favor LLenar el campo ciudad", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
 
-            if (SexoComboBox.SelectedIndex == 0)
+            if (SexoComboBox.SelectedIndex < 0)
             {
                 esValido = false;
                 MessageBox.Show("Favor LLenar el campo sexo ", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -279,7 +279,7 @@ namespace RegistroDePrestamo.UI.Registros
                 MessageBox.Show("Favor LLenar el campo de intereses", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
 
-            if (FormaDePago.SelectedIndex == 0)
+            if (FormaDePago.SelectedIndex < 0)
             {
                 esValido = false;
                 MessageBox.Show("Favor LLenar el campo de forma de pago", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
